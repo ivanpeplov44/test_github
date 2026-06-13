@@ -26,13 +26,13 @@ jobs:
           PYTHONPATH: ${{ github.workspace }}
 
       - name: Type checking with mypy
-        run: mypy src/
+        run: mypy scr/
 
       - name: Code formatting check with black
-        run: black --diff --check src/
+        run: black --diff --check scr/
 
       - name: Import sorting check with isort
-        run: isort --check-only src/
+        run: isort --check-only scr/
 
       - name: Linting with flake8
-        run: flake8 src/
+        run: flake8 scr/
